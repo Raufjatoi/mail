@@ -2,9 +2,9 @@ textarea {
     min-height: 400px;
 }
 .read{
-    background-color: gray;
+    background-color: white;
 }
 
 .unread{
-    background-color: white;
+    background-color:  rgb(152, 143, 143);
 }
