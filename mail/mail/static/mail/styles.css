@@ -1,13 +1,13 @@
 /* styles.css */
 
 body {
-    background-color: blue;
+    background-color: rgb(2, 2, 50);
     font-family: 'Arial', sans-serif;
     color: orange;
 }
 
 h2 {
-    color: #007bff;
+    color: #dfe3e7;
     text-align: center;
     margin-bottom: 20px;
 }
