@@ -1,10 +1,83 @@
-textarea {
-    min-height: 400px;
-}
-.read{
-    background-color: white;
+/* styles.css */
+
+body {
+    background-color: blue;
+    font-family: 'Arial', sans-serif;
+    color: orange;
 }
 
-.unread{
-    background-color:  rgb(152, 143, 143);
+h2 {
+    color: #007bff;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.btn-group .btn {
+    margin-right: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-group .btn:hover {
+    background-color: #0056b3;
+    color: #fff;
+}
+
+#emails-view, #emails-detail-view, #compose-view {
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+#emails-view h3, #compose-view h3 {
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-weight: bold;
+}
+
+#emails-view .list-group-item {
+    margin-bottom: 10px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#emails-view .list-group-item:hover {
+    background-color: #e9ecef;
+    cursor: pointer;
+}
+
+#emails-detail-view p {
+    margin-top: 10px;
+}
+
+#emails-detail-view button {
+    margin-top: 10px;
+}
+
+footer.footer {
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 10px;
+}
+
+footer.footer p {
+    margin: 0;
+    font-size: 1em;
+}
+
+@media (max-width: 768px) {
+    .btn-group .btn {
+        margin-bottom: 10px;
+        width: 100%;
+    }
+
+    #emails-view, #emails-detail-view, #compose-view {
+        padding: 15px;
+    }
 }

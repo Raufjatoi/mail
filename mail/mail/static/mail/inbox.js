@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
   document.querySelector('#inbox').addEventListener('click', () => load_mailbox('inbox'));
   document.querySelector('#sent').addEventListener('click', () => load_mailbox('sent'));
   document.querySelector('#archived').addEventListener('click', () => load_mailbox('archive'));
-  document.querySelector('#compose').addEventListener('click', compose_email);
+  document.querySelector('#compose').addEventListener('click', () => compose_email()); // Fix: Call compose_email without arguments
 
   document.querySelector('#compose-form').addEventListener('submit', send_email);
 
@@ -11,7 +11,8 @@ document.addEventListener('DOMContentLoaded', function() {
   load_mailbox('inbox');
 });
 
-function compose_email(recipients = '', subject = '', body = '') {
+function compose_email(recipients = 'to', subject = '', body = '') {
+  console.log('compose_email called with:', recipients, subject, body); // Debugging: Log parameters
   // Show compose view and hide other views
   document.querySelector('#emails-view').style.display = 'none';
   document.querySelector('#compose-view').style.display = 'block';
@@ -105,6 +106,7 @@ function view_email(id) {
 }
 
 function load_mailbox(mailbox) {
+  console.log('load_mailbox called with:', mailbox); // Debugging: Log mailbox name
   // Show the mailbox and hide other views
   document.querySelector('#emails-view').style.display = 'block';
   document.querySelector('#compose-view').style.display = 'none';
